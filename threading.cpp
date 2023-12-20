@@ -340,16 +340,16 @@ void response (float x) {
 using namespace std;
 void threading() {
 
-    cout<<"Enter the dimensions of square matrices"<<endl;
+    //cout<<"Enter the dimensions of square matrices"<<endl;
     int n;
     cin >> n;
     threadMatrix u(n);
-    cout<<"Enter matrix 1"<<endl;
+    //cout<<"Enter matrix 1"<<endl;
     u.takeInputs();
     //u.printMatrix();
 
     threadMatrix v(n);
-    cout<<"Enter matrix 2"<<endl;
+    //cout<<"Enter matrix 2"<<endl;
     v.takeInputs();
     //v.printMatrix();
     auto start = chrono::high_resolution_clock::now();
@@ -360,9 +360,9 @@ void threading() {
     }
     auto elapsed = chrono::duration_cast<std::chrono::duration<double>>(end - start);
 
-    cout<<"Printing result"<<endl;
-    mul->printMatrix(); 
-    cout<<"Number of cycles is "<<elapsed.count()<<endl;
+    //cout<<"Printing result"<<endl;
+    //mul->printMatrix(); 
+    cout<<elapsed.count()<<endl;
 
  //   thread t1(foo);
    // thread t2(response,0.25);

@@ -5,6 +5,8 @@
 #include <iomanip>
 using namespace std;
 
+//#define float int
+
 class simdMatrix {
     public:
     float **a;
@@ -141,16 +143,16 @@ class simdMatrix {
 
 void simd() {
 
-    cout<<"Enter the dimensions of square matrices"<<endl;
+    //cout<<"Enter the dimensions of square matrices"<<endl;
     int n;
     cin >> n;
     simdMatrix u(n);
-    cout<<"Enter matrix 1"<<endl;
+    //cout<<"Enter matrix 1"<<endl;
     u.takeInputs();
     //u.printMatrix();
 
     simdMatrix v(n);
-    cout<<"Enter matrix 2"<<endl;
+    //cout<<"Enter matrix 2"<<endl;
     v.takeInputs();
     //v.printMatrix();
     auto start = chrono::high_resolution_clock::now();
@@ -161,8 +163,8 @@ void simd() {
     }
     auto elapsed = chrono::duration_cast<std::chrono::duration<double>>(end - start);
 
-    cout<<"Printing result"<<endl;
-    mul->printMatrix(); 
-    cout<<"Number of cycles is "<<elapsed.count()<<endl;
+    //cout<<"Printing result"<<endl;
+    //mul->printMatrix(); 
+    cout<<elapsed.count()<<endl;
     
 }

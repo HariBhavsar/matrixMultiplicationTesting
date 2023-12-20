@@ -3,7 +3,7 @@
 #include <chrono>
 #include <iomanip>
 using namespace std;
-
+//#define float int
 class matrix2 {
 
     public:
@@ -68,16 +68,16 @@ class matrix2 {
 
 void ijk () {
     //cout<<"bruh"<<endl;
-    cout<<"Enter the dimensions of square matrices"<<endl;
+    //cout<<"Enter the dimensions of square matrices"<<endl;
     int n;
     cin >> n;
     matrix2 u(n);
-    cout<<"Enter matrix 1"<<endl;
+    //cout<<"Enter matrix 1"<<endl;
     u.takeInputs();
     //u.printMatrix();
 
     matrix2 v(n);
-    cout<<"Enter matrix 2"<<endl;
+    //cout<<"Enter matrix 2"<<endl;
     v.takeInputs();
     //v.printMatrix();
     auto start = chrono::high_resolution_clock::now();
@@ -88,7 +88,7 @@ void ijk () {
     }
     auto elapsed = chrono::duration_cast<std::chrono::duration<double>>(end - start);
 
-    cout<<"Printing result"<<endl;
-    mul->printMatrix(); 
-    cout<<"Number of cycles is "<<elapsed.count()<<endl;
+    //cout<<"Printing result"<<endl;
+    //mul->printMatrix(); 
+    cout<<elapsed.count()<<endl;
 }
